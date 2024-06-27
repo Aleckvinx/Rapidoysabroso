@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bootstrap 4, from LayoutIt!</title>
+
+	<meta name="description" content="Source code generated using layoutit.com">
+	<meta name="author" content="LayoutIt!">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<img src="icons8-pizza-50.png" alt="" width="50px">
+			<a class="navbar-brand" href="#">Rapido y sabroso</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav align-items-end">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#"></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="fondo">
+		<div id="carouselExample" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="Hamburguesa.jpeg" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="perro calientes.jpg" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="pizza.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="tacos.jpg" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+	<p id="precios">Nuestros Precios </p>
+	<div id="tabla">
+		<div class="productos">
+			<table class="table">
+
+				<br>
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							Productos
+						</th>
+						<th>
+							precios unidad
+						</th>
+						<th>
+							combos
+						</th>
+						<th>
+							Precios Combos
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							Hamburguesa
+						</td>
+						<td>
+							14.000
+						</td>
+						<td>
+							Gaseosa y Hamburguesa + papas
+						</td>
+						<td>
+							22.000
+						</td>
+					</tr>
+					<tr class="table">
+						<td>
+							2
+						</td>
+						<td>
+							perros calientes
+						</td>
+						<td>
+							10.000
+						</td>
+						<td>
+							Perro caliente + gaseosa
+						</td>
+						<td>
+							12.000
+						</td>
+					</tr>
+					<tr class="table">
+						<td>
+							3
+						</td>
+						<td>
+							tacos
+						</td>
+						<td>
+							14.000
+						</td>
+						<td>
+							taco gaseosa + nachos
+						</td>
+						<td>
+							20.000
+						</td>
+					</tr>
+					<tr class="table">
+						<td>
+							4
+						</td>
+						<td>
+							pizza porcion
+						</td>
+						<td>
+							8.500
+						</td>
+						<td>
+							pizza + gaseosa pequeña
+						</td>
+						<td>
+							10.000
+						</td>
+					</tr>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">
+				<h1>Orden de Comida</h1>
+				<button onclick="abrirFormulario()">Abrir Formulario</button>
+			
+				<div id="formulario" style="display: none;">
+					<form action="procesar_pedido.php" method="post">
+						<label for="hamburguesa">Hamburguesa:</label>
+						<input type="number" id="hamburguesa" name="hamburguesa" min="0" value="0">
+			
+						<label for="hotdog">Hot Dog:</label>
+						<input type="number" id="hotdog" name="hotdog" min="0" value="0">
+			
+						<label for="pizza">Pizza:</label>
+						<input type="number" id="pizza" name="pizza" min="0" value="0">
+			
+						<label for="tacos">Tacos:</label>
+						<input type="number" id="tacos" name="tacos" min="0" value="0">
+			
+						<input type="submit" value="Enviar Pedido">
+					</form>
+				</div>
+			
+				<script>
+					function abrirFormulario() {
+						const formulario = document.getElementById('formulario');
+						formulario.style.display = 'block';
+					}
+				</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+		integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
